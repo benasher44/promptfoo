@@ -136,6 +136,15 @@ const Strategies: Strategy[] = [
     },
   },
   {
+    key: 'experimental-tree-jailbreak',
+    action: (testCases) => {
+      logger.debug('Adding experimental tree jailbreaks to all test cases');
+      const experimentalTreeJailbreaks = addIterativeJailbreaks(testCases, 'iterative:tree');
+      logger.debug(`Added ${experimentalTreeJailbreaks.length} experimental tree jailbreak test cases`);
+      return experimentalTreeJailbreaks;
+    },
+  },
+  {
     key: 'jailbreak',
     action: (testCases) => {
       const harmfulPrompts = testCases.filter((t) => t.metadata.pluginId.startsWith('harmful:'));
