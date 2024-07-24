@@ -1,3 +1,5 @@
+# RAG Eval Example
+
 This RAG example allows you to ask questions over a number of public company SEC filings. It uses LangChain, but the flow is representative of any RAG solution.
 
 There are 3 parts:
